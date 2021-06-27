@@ -5,6 +5,8 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -42,6 +44,7 @@ public class ContainerBarrel extends Container {
 
     private void addOwnSlots() {
         IItemHandler itemHandler = this.te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+        //IFluidHandler fluidHandler = this.te.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY,null);
 
         int slotIndex = 0;
         addSlotToContainer(new SlotItemHandler(itemHandler, slotIndex++, 53, 30) {
